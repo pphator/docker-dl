@@ -120,5 +120,3 @@ RUN wget https://get.docker.com -q -O /tmp/getdocker && \
     sh /tmp/getdocker
 	
 WORKDIR /notebooks
-
-ENTRYPOINT ["/bin/sh", "-c"]
