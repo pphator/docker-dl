@@ -112,23 +112,7 @@ RUN pip3 install torch torchvision torchtext && \
 WORKDIR /jupyter/config
 WORKDIR /jupyter/secret
 RUN pip3 install jupyter && \
-    pip3 install jupyterlab && \
-    pip3 install jupyter_contrib_nbextensions && \
-    jupyter contrib nbextension install --system && \
-    pip3 install ipyvolume && \
-    pip3 install jupyterhub && \
-    pip3 install -U nbdime && \
-    nbdime extensions --enable && \
-    jupyter labextension install @jupyterlab/git && \
-    pip3 install --upgrade jupyterlab-git && \
-    jupyter serverextension enable --py jupyterlab_git && \
-    jupyter labextension install @jupyterlab/toc && \
-    jupyter labextension install @jupyterlab/github && \
-    pip3 install ipywidgets && \
-    jupyter nbextension enable --py --sys-prefix widgetsnbextension && \
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager && \
-    jupyter labextension install plotlywidget && \
-    jupyter labextension install jupyterlab-plotly
+    pip3 install jupyterlab
 
 # install docker
 RUN wget https://get.docker.com -q -O /tmp/getdocker && \
