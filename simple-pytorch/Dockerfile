@@ -122,5 +122,3 @@ RUN wget https://get.docker.com -q -O /tmp/getdocker && \
 WORKDIR /notebooks
 
 ENTRYPOINT ["/bin/sh", "-c"]
-
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser"]
