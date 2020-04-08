@@ -121,5 +121,8 @@ RUN wget https://get.docker.com -q -O /tmp/getdocker && \
 	
 WORKDIR /notebooks
 
+RUN jupyter notebook --allow-root --generate-config \
+	&& echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
+
 # execute
 CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks",  "--ip=0.0.0.0",  "--allow-root", "--port=9999",  "--no-browser"]
