@@ -122,4 +122,4 @@ RUN wget https://get.docker.com -q -O /tmp/getdocker && \
 WORKDIR /notebooks
 
 # execute
-CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks",  "--ip='*'",  "--allow-root", "--port=1234",  "--no-browser"]
+CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks",  "--ip=0.0.0.0",  "--allow-root", "--port=9999",  "--no-browser"]
