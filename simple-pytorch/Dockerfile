@@ -125,4 +125,5 @@ RUN jupyter notebook --allow-root --generate-config \
 	&& echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
 
 # execute
-CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks",  "--ip=0.0.0.0",  "--allow-root", "--port=9990",  "--no-browser"]
+# CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks",  "--ip=0.0.0.0",  "--allow-root", "--port=9990",  "--no-browser"]
+CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks", "--allow-root", "--port=9990",  "--no-browser"]
