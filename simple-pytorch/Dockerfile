@@ -108,8 +108,7 @@ RUN apt-get install -y graphviz libfreetype6-dev libpng-dev libjpeg-dev && \
 # RUN pip3 install torch torchvision torchtext && \
 #     pip3 install pyro-ppl
 
-RUN pip3 install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit==10.0 torchtext && \
-    pip3 install pyro-ppl
+RUN pip3 install torch==1.2.0 torchvision==0.4.0 -f https://download.pytorch.org/whl/torch_stable.html 
 
 # install jupyter and extensions
 WORKDIR /jupyter/config
