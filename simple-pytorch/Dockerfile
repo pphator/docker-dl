@@ -105,7 +105,10 @@ RUN apt-get install -y graphviz libfreetype6-dev libpng-dev libjpeg-dev && \
     pip3 install tqdm
 
 # install deep learning libraries	
-RUN pip3 install torch torchvision torchtext && \
+# RUN pip3 install torch torchvision torchtext && \
+#     pip3 install pyro-ppl
+
+RUN pip3 install install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 torchtext && \
     pip3 install pyro-ppl
 	
 # install jupyter and extensions
