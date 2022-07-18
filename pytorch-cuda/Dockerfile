@@ -49,6 +49,14 @@ WORKDIR /jupyter/secret
 RUN pip install jupyter && \
     pip install jupyterlab
 
+RUN pip install numpy==1.19.4 \
+                pandas==1.1.5 \
+                scikit-learn==0.23.2 \
+                seaborn==0.11.0 
+
+RUN pip install mlflow
+
+RUN pip install imbalanced-learn
 	
 WORKDIR /notebooks
 
@@ -57,4 +65,3 @@ RUN jupyter notebook --allow-root --generate-config \
 
 # execute
 CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks",  "--ip=0.0.0.0",  "--allow-root", "--port=9990",  "--no-browser"]
-# CMD ["jupyter",  "notebook",  "--notebook-dir=/notebooks", "--allow-root", "--no-browser"]
